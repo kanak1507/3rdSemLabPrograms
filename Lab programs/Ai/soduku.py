@@ -7,20 +7,14 @@ grid = [
 def solve():
     for r in range(4):
         for c in range(4):
-            # Find an empty cell
             if grid[r][c] == 0:
-                # Try numbers from 1 to 4
                 for n in range(1, 5):
-                    # Check row
                     if n in grid[r]:
                         continue
-                    # Check column
                     if any(grid[i][c] == n for i in range(4)):
                         continue
-                    # Find 2x2 box
                     br = (r // 2) * 2
                     bc = (c // 2) * 2
-                    # Check box
                     found = False
                     for i in range(br, br + 2):
                         for j in range(bc, bc + 2):
@@ -28,17 +22,13 @@ def solve():
                                 found = True
                     if found:
                         continue
-                    # Place the number
                     grid[r][c] = n
-                    # Solve remaining cells
                     if solve():
                         return True
-                    # Backtrack if incorrect
                     grid[r][c] = 0
                 return False
     return True
 solve()
-# Display solved Sudoku
 for row in grid:
     print(row)
 '''

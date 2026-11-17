@@ -1,0 +1,13 @@
+dict1 = {'Python':1 , 'Java':2, 'C':3, 'Ruby':4, 'Golang':5}
+print("Original Dictionary")
+print(dict1)
+print("Accessing elements from dictionary")
+print(dict1['Ruby'])
+dict1.update({'C++':6})
+print(f"Dictionary after adding C++: {dict1}")
+dict1.pop('Ruby')
+print(f"Dictionary after removing Ruby: {dict1}")
+dict1.popitem()
+print(f"Dictionary after removing last item: {dict1}")
+print(f"Keys of dictionary: {dict1.keys()}")
+print(f"Values of dictionary: {dict1.values()}")

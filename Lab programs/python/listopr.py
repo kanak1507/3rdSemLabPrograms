@@ -1,0 +1,21 @@
+list1= [66,23,45,67,89,88]
+list2 = [8,76,56,43,59,66,90]
+print("Original List1 and list2")
+print(list1)
+print(list2)
+list1.append(123)
+print(f"List1 after appending {list1}")
+list1.pop(3)
+print(f"List1 after popping index 3: {list1}")
+list2.remove(76)
+print(f"List2 after removing 76: {list2}")
+list1.sort()
+print(f"List1 after sorting: {list1}")
+list2.insert(2,100)
+print(f"List2 after inserting 100 at index 2: {list2}")
+slice_2 = list2[1:4]
+print(f"Slice of list2 from index 1 to 4: {slice_2}")
+list1.extend(list2)
+print(f"List1 after extending with list2: {list1}")
+l1=list1.count(66)
+print(f"Count of 66 in list1: {l1}")
