@@ -1,2 +1,5 @@
 # 3rdSemLabPrograms
-Lab programs with viva q n a
+Lab programs
+-AI
+-Python
+-OperatingSystem
